@@ -22,13 +22,13 @@ ng-controller="mainCtrl">
 <input type="text" ng-model="title">
 <!--agregando link-->
 <br>
-<!--<input type="" ng -model="link">-->
+<input type="" ng -model="link">
 <br>
 <button type="submit"> post</button>
 </form>
 
 <div ng-repeat="post in post |orderBy:'-upvotes'"> <!--enlugar del arroba se pone test -->
-	<!--<span ng-click="incrementUpvotes (post)">^</span>-->
+	<span ng-click="incrementUpvotes (post)">^</span>
 <!--agregando links-->
 		<a ng-show ="post.link" href="{{post.link}}">
 			{{post.title}} 

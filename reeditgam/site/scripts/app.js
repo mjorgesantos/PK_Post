@@ -29,6 +29,7 @@ modulo1.controller("mainCtrl",[
 					upvotes:0
 				});
 			$scope.title="";
+			//para borrar contenido
 			$scope.link=""; 
 	//two-way data binding
 		};
