@@ -2,19 +2,25 @@
   "name": "Reeditgam",
   "version": "0.0.0",
   "authors": [
-    "JorgeSantos <santosjorge880@gmail.com>"
+    "jorgesantos <santosjorge880@gmail.com>"
   ],
   "description": "Proyecto final de PAW",
   "main": "index.html",
   "keywords": [
     "PAW",
-    "mean"],
+    "mean"
+  ],
   "license": "MIT",
+  "homepage": "www.foo.com",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "sweetalert": "~0.5.0",
+    "angular-h-sweetalert": "~1.4.3"
+  }
 }

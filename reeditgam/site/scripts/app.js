@@ -1,4 +1,4 @@
-console.log("#JorgeS: Cargo app.js");
+console.log("#Jorge: Cargo app.js");
 // Inyectadon el modulo de ui-router
 // como parametro del arreglo de objetos
 // del modulo
@@ -12,19 +12,11 @@ modulo1.config(
 	'$urlRouterProvider',
 	function($stateProvider, $urlRouterProvider){
 		// Iniciando rutina de configuracion
-		// Creando ruta /Home
 		$stateProvider.state('home',{
 			//Definiendo estado como un objeto
 			url:"/home", // Url que define el estado
 			templateUrl: "/home.html", // Plantilla base para el estado
-			controller: "mainCtrl"
-		});
-		// Creando Ruta de visualizacion
-		// de Post
-		$stateProvider.state('posts',{
-			url: "/posts/{id}",
-			templateUrl: "/posts.html",
-			controller: "postsCtrl"
+			controller: 'mainCtrl'
 		});
 		// Url por defecto
 		$urlRouterProvider.otherwise('home');
@@ -58,8 +50,7 @@ modulo1.factory('posts',[function(){
 }]);
 
 // Creando controlador	
-// dependency injection
-// Creando controlador mainCtrl
+// dependcy injection
 modulo1.controller("mainCtrl",[
 	'$scope','posts', // Inyectando factory post
 	function($scope, posts){
@@ -92,12 +83,3 @@ modulo1.controller("mainCtrl",[
 		 	post.upvotes += 1;
 		 };
 	}]);
-
-// Creando controlador postsCtrl
-modulo1.controller("postCtrl",[
-	'$scope',
-	'$stateParams',
-	'posts'],function($scope, $stateParams, posts){
-		// Cuerpo del controlador
-		
-	});
